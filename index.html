@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Shopping-cart</title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="basketDiv">
+            <h1>Cart</h1>
+            <div class="emptyCart">
+            </div>
+            <table class="basket table">
+            </table>
+            <div class="discount"></div>
+            <div class="checkout">
+
+                <div class="totalprice">Total price: €<span class="total"></span></div>
+                <div>
+                    <button class="buy-products">Order now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topnav">
+        <a class="active" onclick="openNav()"><i class="fas fa-shopping-cart"></i> Cart</a>
+    </div>
+    <main>
+        <div class="cards">
+            <div class="card">
+                <img src="img/product1.jpg" alt="phone">
+                <div class="container">
+                    <h4>Phone</h4>
+                    <p>150€</p>
+                    <button data-name="phone" data-price="150" class="add-product">Add to cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/product2.jpg" alt="headphones">
+                <div class="container">
+                    <h4>Headphones</h4>
+                    <p>35€</p>
+                    <button class="add-product" data-name="headphones" data-price="35">Add to cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/product3.jpg" alt="watch">
+                <div class="container">
+                    <h4>Watch</h4>
+                    <p>70€</p>
+                    <button class="add-product" data-name="watch" data-price="70">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+<script src="app.js"></script>
+<!--Sidenav script-->
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "570px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+<!--Disable input typing -->
+<script>
+    $("[type='number']").keypress(function(evt) {
+        evt.preventDefault();
+    });
+</script>
+
+
+
+</html>
