@@ -1,6 +1,12 @@
 /* Init cart*/
 var cart = [];
 
+if(cart.length == 0){
+  $('.checkout').html('');
+  body = "<h2>Your cart is empty</h2>";
+  $('.emptyCart').html(body);
+}
+
 /*Display the cart to user */
 showCart = function () {
   var body = "";
